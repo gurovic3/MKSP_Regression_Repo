@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="RegressionTestsSuite" verbose="1">
+
+ 	<test name="PositiveTests">
+		<parameter name="browser" value="chrome"/>
+ 		<parameter name="name" value="Test2"/>
+		<parameter name="phone" value="9797776677"/>
+		<parameter name="zip" value="10038"/>
+
+	<!-- 	<groups> <run> <include name="smokeTest" /> </run> </groups> -->
+		<classes>
+			<class name="com.makespace.mksp.RegressionTests">
+				<methods>
+					<include name="makeAppointmentPositive"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="NegativePasswordTests">
+		<parameter name="browser" value="chrome"/>
+ 		<parameter name="name" value="Test3"/>
+		<parameter name="phone" value="9797776688"/>
+		<parameter name="zip" value="10038"/>
+			
+<!-- 		<groups> <run> <include name="smokeTest"> </run> </groups> -->
+		<classes>
+			<class name="com.makespace.mksp.RegressionTests">
+				<methods>
+					<include name="makeAppointmentNegative"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionTestsSuite]">
+  <test thread-count="5" name="PositiveTests(failed)">
+    <parameter name="zip" value="10038"/>
+    <parameter name="phone" value="9797776677"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="name" value="Test2"/>
+    <classes>
+      <class name="com.makespace.mksp.RegressionTests">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="makeAppointmentPositive" invocation-numbers="0"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.makespace.mksp.RegressionTests -->
+    </classes>
+  </test> <!-- PositiveTests(failed) -->
+  <test thread-count="5" name="NegativePasswordTests(failed)">
+    <parameter name="zip" value="10038"/>
+    <parameter name="phone" value="9797776688"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="name" value="Test3"/>
+    <classes>
+      <class name="com.makespace.mksp.RegressionTests">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="makeAppointmentNegative" invocation-numbers="0"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.makespace.mksp.RegressionTests -->
+    </classes>
+  </test> <!-- NegativePasswordTests(failed) -->
+</suite> <!-- Failed suite [RegressionTestsSuite] -->
